@@ -17,6 +17,7 @@ fs.readFile(f,'utf8',(err,r)=>
     }
 });
 
+//updating file
 fs.appendFile(f,' Its Appended By Script',(err)=>
 {
     if(!err)
@@ -25,6 +26,7 @@ fs.appendFile(f,' Its Appended By Script',(err)=>
     }
 });
 
+//renaming file
 fs.rename(f,`${filePath}/testNewfile.txt`,(err)=>
 {
     if(!err)
@@ -36,4 +38,5 @@ fs.rename(f,`${filePath}/testNewfile.txt`,(err)=>
     }
 });
 
-
+//delete file
+fs.unlinkSync(`${filePath}/testfile.txt`);
