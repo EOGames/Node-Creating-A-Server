@@ -11,6 +11,9 @@ fs.readFile(f,'utf8',(err,r)=>
     if (!err)
     {
         console.log(r);
+    }else
+    {
+        console.log(err);
     }
 });
 
